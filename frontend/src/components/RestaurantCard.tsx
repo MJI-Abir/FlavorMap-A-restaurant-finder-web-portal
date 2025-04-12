@@ -48,7 +48,8 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({
   const getImageUrl = () => {
     if (restaurant.photos && restaurant.photos.length > 0) {
       const { photo_reference } = restaurant.photos[0];
-      return `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo_reference}&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`;
+      const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? "";
+      return `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo_reference}&key=${apiKey}`;
     }
     return "/placeholder-restaurant.jpg"; // Fallback image
   };
