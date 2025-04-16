@@ -33,6 +33,7 @@ const LocationSearch: React.FC<LocationSearchProps> = ({
 
     setError("");
     onSearch(location);
+    console.log("type of location: ", typeof location);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -81,12 +82,14 @@ const LocationSearch: React.FC<LocationSearchProps> = ({
           error={!!error}
           helperText={error}
           disabled={isLoading}
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <SearchIcon />
-              </InputAdornment>
-            ),
+          slotProps={{
+            input: {
+              startAdornment: (
+                <InputAdornment position="start">
+                  <SearchIcon />
+                </InputAdornment>
+              ),
+            },
           }}
           placeholder="e.g., Dhaka, Chittagong, Sylhet..."
         />
