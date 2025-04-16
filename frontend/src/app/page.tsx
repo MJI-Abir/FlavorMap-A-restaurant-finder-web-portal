@@ -40,14 +40,14 @@ export default function Home() {
           headers: {
             "Content-Type": "application/json",
           },
-          credentials: 'include', // Include credentials for CORS
+          credentials: "include", // Include credentials for CORS
+          mode: "cors", // Explicitly set CORS mode
         }
       );
       console.log(" Shawwar Response:", response);
       // Check if the response is ok (status in the range 200-299)
-
       if (!response.ok) {
-        throw new Error(`kuttar baccha bal er HTTP error! Status: ${response.status}`);
+        throw new Error(`HTTP error! Status: ${response.status}`);
       }
 
       const data = await response.json();

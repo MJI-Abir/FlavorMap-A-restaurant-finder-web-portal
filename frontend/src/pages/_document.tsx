@@ -8,7 +8,7 @@ import Document, {
   DocumentContext,
 } from "next/document";
 import createEmotionServer from "@emotion/server/create-instance";
-import createEmotionCache from "@/theme/createEmotionCache";
+import createEmotionCache from "@/app/theme/createEmotionCache";
 import { AppProps } from "next/app";
 import { EmotionCache } from "@emotion/react";
 

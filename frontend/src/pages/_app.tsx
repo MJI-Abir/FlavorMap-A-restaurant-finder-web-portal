@@ -2,9 +2,9 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import theme from "@/theme/theme";
+import theme from "@/app/theme/theme";
 import { CacheProvider, EmotionCache } from "@emotion/react";
-import createEmotionCache from "@/theme/createEmotionCache";
+import createEmotionCache from "@/app/theme/createEmotionCache";
 import Head from "next/head";
 
 // Client-side cache, shared for the whole session of the user in the browser

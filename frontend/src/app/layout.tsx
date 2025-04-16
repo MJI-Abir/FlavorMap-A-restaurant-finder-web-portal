@@ -30,9 +30,12 @@ function ElevationScroll(props: Props) {
     target: window ? window() : undefined,
   });
 
-  return React.cloneElement(children as React.ReactElement<{ elevation?: number }>, {
-    elevation: trigger ? 4 : 0,
-  });
+  return React.cloneElement(
+    children as React.ReactElement<{ elevation?: number }>,
+    {
+      elevation: trigger ? 4 : 0,
+    }
+  );
 }
 
 export default function RootLayout({
